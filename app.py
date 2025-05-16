@@ -7,7 +7,6 @@ from deepface import DeepFace
 from liveness import is_real_face
 import asyncio
 import gc
-import psutil
 import sys
 
 # Fix for Windows event loop policy
@@ -88,8 +87,3 @@ webrtc_streamer(
     rtc_configuration=RTC_CONFIGURATION,
     media_stream_constraints={"video": True, "audio": False}
 )
-
-# Optional: Memory usage sidebar
-process = psutil.Process()
-mem = process.memory_info().rss / 1e6  # MB
-st.sidebar.markdown(f"### RAM Usage: `{mem:.2f} MB`")
