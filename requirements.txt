@@ -1,0 +1,10 @@
+streamlit
+opencv-python-headless
+tensorflow==2.18.0
+tf-keras
+keras
+deepface
+mtcnn
+Pillow
+mediapipe
+streamlit-webrtc
